@@ -1,0 +1,13 @@
+all: mypipline
+
+mypipline: mypipline.o 
+	gcc -m32 -g -Wall -o mypipline mypipline.o
+
+mypipline.o: mypipline.c
+	gcc -g -Wall -m32 -c -o mypipline.o mypipline.c
+
+
+.PHONE: clean
+clean:
+	rm -f *.o mypipline
+
